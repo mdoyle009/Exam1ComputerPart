@@ -29,8 +29,7 @@
 ###############################################################################
 
 def get_word(part_of_speech):
-    raw_word = input(f"Please enter a(n) {part_of_speech}: ")
-    word = str(raw_word)
+    word = input(f"Please enter a(n) {part_of_speech}: ")
     return word
 
 ###############################################################################
