@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   In this module, we are going to create a program that will allow a user to
 #   do a simple mad lib.
@@ -28,8 +28,13 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def get_word(part_of_speech):
+    raw_word = input(f"Please enter a(n) {part_of_speech}: ")
+    word = str(raw_word)
+    return word
+
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   Now, write a function called name() that simply asks the user to enter
 #   their name and return the name they enter.
@@ -43,8 +48,12 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def name():
+    username = input("Please enter your name: ")
+    return username
+
 ###############################################################################
-# TODO: 3. (9 pts)
+# DONE: 3. (9 pts)
 #
 #   Now, let's put it all together.
 #
@@ -53,7 +62,7 @@
 #   solution):
 #
 #       1. Prints "Let's play Mad Libs!"
-#       2. Promps the user to enter their name and saves it to a variable.
+#       2. Prompts the user to enter their name and saves it to a variable.
 #       3. Prints "Welcome, <USER'S_NAME>!"
 #       4. Asks the user for a "noun" and saves it to a variable
 #       5. Asks the user for a "verb ending in -ing" and saves it to a variable
@@ -68,3 +77,14 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def main():
+    print("Let's play Mad Libs!")
+    nameVar = name()
+    print(f"Welcome, {nameVar}!")
+    noun = get_word("noun")
+    verb = get_word("verb ending in -ing")
+    adjective = get_word("adjective")
+    print(f"This semester, I hope to join the {noun} club and go {verb}. It is going to be a(n) {adjective} semester!")
+main()
+
